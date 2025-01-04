@@ -6,8 +6,8 @@ import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
-@Table(name = "TB_BOOK")
-public class BookModel implements Serializable {
+@Table(name = "TB_AUTHOR")
+public class AuthorModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -15,7 +15,7 @@ public class BookModel implements Serializable {
     private UUID uuid;
 
     @Column(nullable = false, unique = true)
-    private String title;
+    private String name;
 
     public UUID getUuid() {
         return uuid;
@@ -25,11 +25,11 @@ public class BookModel implements Serializable {
         this.uuid = uuid;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 }
