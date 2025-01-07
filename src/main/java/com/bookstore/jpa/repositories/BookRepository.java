@@ -11,9 +11,7 @@ import java.util.UUID;
 
 public interface BookRepository extends JpaRepository<BookModel, UUID> {
 
-    BookModel findBookModelTitle(String title);
 
-    @Query(value = "SELECT * FROM tb_book WHERE publisher_id =:id", nativeQuery = true )
-    List<BookModel> findBooksByPublisher(@Param("id") UUID id);
+
 
 }
